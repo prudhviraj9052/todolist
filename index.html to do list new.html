@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To - Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        background-image: url(back2.jpg);
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    header {
+        background-color: #0e0c93;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    
+    #task-form {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(20, 20, 118, 0.1);
+        text-align: center;
+        width: 80%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    
+    .input-container {
+        margin-bottom: 1.5rem;
+    }
+    
+    
+    .input-container label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    
+    
+    .input-container input,
+    .input-container select {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    
+    #add-task-form button[type="submit"] {
+        background-color: #1e1eb5;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    #add-task-form button[type="submit"]:hover {
+        background-color: #261ca7;
+    }
+    
+    .task-item {
+        background-color: #e5acb6;
+        border: 1px solid #d3d3d3;
+        color: #281893;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .task-item h3 {
+        margin-top: 0;
+        font-size: 1.25rem;
+        color: #fff;
+        margin-bottom: 0.5rem;
+    }
+    
+    
+    .task-item p {
+        margin: 0;
+        color: #22199b;
+    }
+    
+    
+    .task-item .priority-label {
+        margin-top: 0.5rem;
+        font-weight: bold;
+        color: #ff8c00;
+        text-transform: uppercase;
+    }
+    
+    
+    .task-item .label {
+        margin-top: 0.5rem;
+        font-weight: bold;
+        color: #3325c6;
+    }</style>
+<body>
+    <header>
+        <h1>To - Do List</h1>
+    </header>
+    <main>
+        <section id="task-form">
+            <h2>Add Task</h2><br>
+            <form id="add-task-form">
+                <div class="input-container">
+                    <label for="task-title">Title:</label>
+                    <input type="text" id="task-title" required>
+                </div>
+                <div class="input-container">
+                    <label for="date of birth">Date of birth:</label>
+                    <input type="date" id="date of birth" required>
+                </div>
+                <div class="input-container">
+                    <label for="task-priority">Priority:</label>
+                    <select id="task-priority" required>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="task-label">Label:</label>
+                    <input type="text" id="task-label" required>
+                </div>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+        <section id="task-list">
+           
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
